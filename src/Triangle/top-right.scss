@@ -1,0 +1,47 @@
+.top-right{
+  //overrides triangle__outer height
+  height:55vh !important;
+  width: calc(100vw - calc(90vw - 622px)) !important;
+  #triangle__inner{
+    display: block;
+    position: absolute;
+    top: 15vh;
+    //left: 264px;
+    height: 300px;
+    width: 622px;
+    transform: rotate(350deg);
+    transform-origin: top left;
+    background: linear-gradient(9deg, rgb(2, 0, 255) 1%, #2a00ff 3%, #0400ff9e 11%, #1628ff 17%, #002dffa6 22%, #0752f378 31%, #0014ff2b 100%);
+    box-shadow: 0 19px 38px rgba(0,0,0,.3), 0 15px 12px rgba(0,0,0,.22)
+  }
+  #triangle__word{
+    position: absolute;
+    font-size: 5.3em;
+    letter-spacing: 0.1em;
+    top: 34.1%;
+    padding-left: 0.2em;
+  }
+}
+
+.bottom-left{
+  //overrides triangle__outer height
+  height: 100vh !important;
+  #triangle__inner{
+    position: absolute;
+    top: -200px;
+    left: -386px;
+    height: 900px;
+    width: 1100px;
+    transform: rotate(-46deg);
+    transform-origin: top left;
+    background-color: #141414a6;
+    box-shadow: 0 19px 38px rgba(0,0,0,.3), 0 15px 12px rgba(0,0,0,.22)
+  }
+  #triangle__word{
+    font-size: 5.3em;
+    letter-spacing: 0.1em;
+    top: 10%;
+    position: absolute;
+    padding-left: 54px;
+  }
+}

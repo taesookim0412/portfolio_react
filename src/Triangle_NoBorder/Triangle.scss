@@ -1,0 +1,199 @@
+#triangle__outer{
+  position: relative;
+  overflow: hidden;
+  //responsive outer
+  height: 50vh;
+  width: 100vw;
+  #triangle__inner{
+  }
+  #triangle__word{
+    white-space: nowrap;
+    opacity: 1;
+    color: black;
+  }
+  #layout__nested{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height:0px;
+    width:0px;
+    .layout__nested__projects__block{
+      height:0px;
+      width:0px;
+    }
+  }
+}
+
+.top-left{
+  //overrides triangle__outer height
+  height:100vh !important;
+  #triangle__inner{
+    display:block;
+    position: absolute;
+    top: 0;
+    //fixed inner
+    left: -68px;
+    height: 900px;
+    width: 600px;
+    transform: rotate(-66deg);
+    transform-origin: top left;
+    background-color: #141414a6;
+    box-shadow: 0 19px 38px rgba(0,0,0,.3), 0 15px 12px rgba(0,0,0,.22);
+    //transition-duration: 1s;
+  }
+  .triangle__layout{
+    position:absolute;
+    border-top: 0px solid black;
+    border-right: 0px solid black;
+    border-bottom: 0px solid black;
+    border-left: 0px solid black;
+    transition:1s;
+  }
+  .triangle__layout.active{
+    //#triangle__word{
+    //  position: fixed;
+    //  top: 80%;
+    //  left: 50%;
+    //}
+    #triangle__inner{
+      background-color: transparent!important;
+      box-shadow: unset;
+    }
+    animation-duration: 1.5s;
+    //animation-name: slide, expand;
+    //animation-delay: 0s, 0.3s;
+    animation-name: expand;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+    left: 0;
+    top: 0;
+    #triangle__word{
+      animation-name: slide;
+      animation-fill-mode: forwards;
+    }
+    #layout__nested{
+      position: fixed;
+      top: 0;
+      left: 0;
+      .layout__nested__projects__block{
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        height: 10vh;
+        width: 20vw;
+        background-color: black;
+      }
+
+    }
+  }
+  @keyframes slide {
+    from{
+      top:0;
+      left: 0;
+    }
+    to{
+      left: 50%;
+      top: 80%;
+    }
+  }
+  @keyframes expand{
+    from {
+      height: 0vh;
+      width: 0vw;
+
+    }
+    //50%{
+    //  left: -50%;
+    //  top: 0;
+    //  border-left: 48vw solid #4570e9;
+    //  border-top: 50vh solid #4570e9;
+    //  border-bottom: 50vh solid #4570e9;
+    //  border-right: 52vw solid #4570e9;
+    //}
+    //90%{
+    //  left: 0;
+    //  top: 0;
+    //  border-left: 50vw solid #4570e9;
+    //  border-top: 50vh solid #4570e9;
+    //  border-bottom: 50vh solid #4570e9;
+    //  border-right: 50vw solid #4570e9;
+    //}
+    to{
+      position:fixed;
+      //left: 0;
+      //top: 0;
+      height: 100vh;
+      width: 100vw;
+      background-color: #4570e9;
+      //border-left: 48vw solid #4570e9;
+      //border-top: 80vh solid #4570e9;
+      //border-bottom: 20vh solid #4570e9;
+      //border-right: 52vw solid #4570e9;
+    }
+  }
+
+  #triangle__word{
+    position:absolute;
+    font-size: 5.3em;
+    letter-spacing: 0.1em;
+    top: 8.1%;
+    //position: absolute;
+    padding-left: 422px;
+  }
+}
+
+.top-right{
+  //overrides triangle__outer height
+  height:55vh !important;
+  width: calc(100vw - calc(90vw - 622px)) !important;
+  #triangle__inner{
+    display: block;
+    position: absolute;
+    top: 15vh;
+    //left: 264px;
+    height: 300px;
+    width: 622px;
+    transform: rotate(350deg);
+    transform-origin: top left;
+    background: linear-gradient(9deg, rgb(2, 0, 255) 1%, #2a00ff 3%, #0400ff9e 11%, #1628ff 17%, #002dffa6 22%, #0752f378 31%, #0014ff2b 100%);
+    box-shadow: 0 19px 38px rgba(0,0,0,.3), 0 15px 12px rgba(0,0,0,.22)
+  }
+  #triangle__word{
+    position: absolute;
+    font-size: 5.3em;
+    letter-spacing: 0.1em;
+    top: 34.1%;
+    padding-left: 0.2em;
+  }
+}
+
+.bottom-left{
+  //overrides triangle__outer height
+  height: 60vh !important;
+  #triangle__inner{
+    position: absolute;
+    top: -200px;
+    left: -386px;
+    height: 900px;
+    width: 1100px;
+    transform: rotate(-46deg);
+    transform-origin: top left;
+    background-color: #141414a6;
+    box-shadow: 0 19px 38px rgba(0,0,0,.3), 0 15px 12px rgba(0,0,0,.22)
+  }
+  #triangle__word{
+    font-size: 5.3em;
+    letter-spacing: 0.1em;
+    top: 10%;
+    position: absolute;
+    padding-left: 54px;
+  }
+}
+
+@media only screen and (max-width: 1280px){
+  #triangle__outer{
+    width: 100vw;
+    #triangle__inner{
+    }
+  }
+}

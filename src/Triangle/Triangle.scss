@@ -1,0 +1,207 @@
+#triangle__outer{
+  position: relative;
+  overflow: hidden;
+  //responsive outer
+  height: 50vh;
+  width: 100vw;
+  #triangle__layout{
+  }
+  #triangle__word{
+    white-space: nowrap;
+    opacity: 1;
+    color: white;
+    z-index: 1;
+    font-size: 5.3em;
+  }
+  .active--2{
+    #triangle__word{
+      position:fixed;
+    }
+  }
+  .layout__nested{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    transition:1s;
+    transition-delay: 2s;
+    overflow: hidden;
+    .layout__nested__projects__tree__wrapper{
+      height:0;
+      width:0;
+      transition: .5s;
+      transition-delay:1.5s;
+    }
+    .layout__nested__projects__tree__block--summary{
+        margin-left:auto;
+        height: 10px;
+        width: 10px;
+        transition: .5s;
+        transition-delay:2.5s;
+      #text-panel{
+        padding-left: 2vw;
+        .button__arrow{
+          background-color: #126bffba;
+          font-size: 3em;
+        }
+        @media only screen and (max-width: 768px){
+          .button__arrow{
+            font-size: 2em;
+          }
+        }
+        .button__arrow:hover{
+          background-color: #2d79f6ba;
+        }
+
+      }
+      .layout__nested__projects__tree__block{
+        position:absolute;
+        height:10px;
+        width:10px;
+        margin:auto;
+        transition: .5s;
+        transition-delay:2.5s;
+      }
+    }
+
+    .layout__nested__projects__tree__block__spacer--bottom{
+      position:absolute;
+      //height:10px;
+      //width:10px;
+      //margin-left:auto;
+      transition: .5s;
+      transition-delay:2.5s;
+    }
+    .layout__nested__projects__block{
+      height:0;
+      width:0;
+      //display: none;
+      transition: .5s;
+      transition-delay:1.5s;
+      //transition-timing-function: ease-in-out;
+    }
+    .layout__nested__projects__tree__block__big{
+      .preview_img{
+        width: auto;
+        height: 77%;
+        max-width: 100%;
+        display: block;
+        margin: auto;
+        object-fit: contain;
+        pointer-events: all;
+        cursor: pointer;
+      }
+      #description{
+        font-size: 1.5em;
+        padding-top: 0.8vh;
+        padding-left: 0.7vw;
+      }
+      position: absolute;
+      top: 20%;
+      left: 1%;
+      height: 77%;
+      width: 73%;
+      background-color: #ffffff47;
+      z-index: 1;
+    }
+  }
+}
+
+//@media only screen and (max-width: 1280px){
+//  #triangle__outer{
+//    width: 100vw;
+//    //#triangle__inner{
+//    //}
+//  }
+//}
+
+@import "./top-left";
+@import "./top-right";
+
+//@media only screen and (max-width: 1024px){
+//  .bottom-left{
+//    #triangle__word{
+//      font-size: 3em!important;
+//    }
+//    #triangle__inner{
+//      //height: 90vw!important;
+//      height: 600px!important;
+//      left: -268px!important;
+//    }
+//  }
+//  .top-left{
+//    #triangle__word{
+//      padding-left: calc(100vw - 5em);
+//      font-size: 3em!important;
+//    }
+//    #triangle__inner{
+//      height: 100vw!important;
+//    }
+//  }
+//}
+@media only screen and (max-width: 786px){
+  #triangle__outer{
+    #triangle__word{
+      font-size: 3em;
+    }
+  }
+  .bottom-left{
+    #triangle__word{
+      top: 3%;
+    }
+    #triangle__inner{
+      //height: 90vw;
+      height: 600px;
+      left: -268px;
+    }
+  }
+  .top-left{
+    #triangle__word{
+      padding-top: 5.1vh;
+      //padding-left: 300px;
+      padding-left: calc(10px + 42vw);
+    }
+    #triangle__inner{
+      height: 100vw;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px){
+  #triangle__outer{
+    #triangle__word{
+      font-size: 2em;
+    }
+  }
+  .bottom-left{
+    #triangle__word{
+      font-size: 3em;
+    }
+    #triangle__inner{
+      //height: 90vw;
+      height: 600px;
+      left: -268px;
+    }
+  }
+  .top-left{
+    #triangle__word{
+      padding-left: calc(100vw - 5em);
+      font-size: 3em;
+      position: fixed;
+      top: 0%;
+      padding-top: 2vh;
+      right: 26%;
+    }
+    #triangle__inner{
+      height: 100vw;
+    }
+    .active{
+      #triangle__word{
+        top:unset;
+        right:unset;
+      }
+    }
+  }
+}
+
