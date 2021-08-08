@@ -1,6 +1,6 @@
 import {Triangle} from "../../Triangle/Triangle";
 import {useAppDispatch, useAppSelector} from "../../app/hooks";
-import {selectTriangleState, setProjects} from "../../features/ActiveTriangle/ActiveTriangleSlice";
+import {selectTriangleState, setHome, setProjects} from "../../features/ActiveTriangle/ActiveTriangleSlice";
 
 export function Landing() {
     const triangleState = useAppSelector(selectTriangleState)
@@ -18,6 +18,17 @@ export function Landing() {
                 elem.classList.add("active--2");
                 otherElem.classList.add("active");
                 otherElem.classList.add("active--2");
+            }
+        }
+        else{
+            const elem = document.getElementsByClassName("triangle__layout")[0] as HTMLDivElement;
+            const otherElem = document.getElementsByClassName("layout__nested")[0] as HTMLDivElement;
+            if (elem.classList.contains("active") || otherElem.classList.contains("active")){
+                dispatch(setHome())
+                elem.classList.remove("active");
+                elem.classList.remove("active--2");
+                otherElem.classList.remove("active");
+                otherElem.classList.remove("active--2");
             }
         }
     })
