@@ -20,17 +20,17 @@ export function Landing() {
                 otherElem.classList.add("active--2");
             }
         }
-        else{
-            const elem = document.getElementsByClassName("triangle__layout")[0] as HTMLDivElement;
-            const otherElem = document.getElementsByClassName("layout__nested")[0] as HTMLDivElement;
-            if (elem.classList.contains("active") && otherElem.classList.contains("active")){
-                dispatch(setHome())
-                elem.classList.remove("active");
-                elem.classList.remove("active--2");
-                otherElem.classList.remove("active");
-                otherElem.classList.remove("active--2");
-            }
-        }
+        // else{
+        //     const elem = document.getElementsByClassName("triangle__layout")[0] as HTMLDivElement;
+        //     const otherElem = document.getElementsByClassName("layout__nested")[0] as HTMLDivElement;
+        //     if (elem.classList.contains("active") && otherElem.classList.contains("active")){
+        //         dispatch(setHome())
+        //         elem.classList.remove("active");
+        //         elem.classList.remove("active--2");
+        //         otherElem.classList.remove("active");
+        //         otherElem.classList.remove("active--2");
+        //     }
+        // }
     })
     return (
         <>
