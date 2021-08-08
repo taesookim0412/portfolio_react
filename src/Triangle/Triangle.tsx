@@ -62,7 +62,7 @@ export function Triangle(props: TriangleProps) {
             if (props.position === "top-left") {
                 dispatch(setProjects())
             }
-            new Promise<void>((resolve) => setTimeout(() => resolve(), 500)).then(res => {
+            new Promise<void>((resolve) => setTimeout(() => resolve(), 0)).then(res => {
                 classList.add("active")
                 setTimeout(() => {
                         classList.add("active--2")

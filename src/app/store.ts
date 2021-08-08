@@ -8,6 +8,7 @@ export const store = configureStore({
     activeTriangle: activeTriangleReducer
 
   },
+  devTools: false
 });
 
 export type AppDispatch = typeof store.dispatch;

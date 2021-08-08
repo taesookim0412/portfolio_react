@@ -1,5 +1,6 @@
 
 .top-left{
+  --slide-duration: 1.5s;
   //overrides triangle__outer height
   height:100vh !important;
   text-overflow: clip;
@@ -35,7 +36,7 @@
       background-color: transparent!important;
       box-shadow: unset;
     }
-    animation-duration: 1.5s;
+    animation-duration: var(--slide-duration);
     animation-name: slide, expand;
     animation-delay: 0s, 0.3s;
     animation-fill-mode: forwards;
@@ -169,7 +170,8 @@
     //  border-right: 50vw solid #4570e9;
     //}
     to{
-      position:fixed;
+      //removed at 2nd block
+      //position:fixed;
       left: 0;
       top: 0;
       //--bg-color: #005aff;

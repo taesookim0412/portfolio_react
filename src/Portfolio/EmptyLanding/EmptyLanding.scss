@@ -1,0 +1,45 @@
+.block{
+  background-image: linear-gradient(0deg, #00000075, #bababa);
+  height: 100vh;
+  width: 100vw;
+
+}
+
+.bottomArrow{
+  position: absolute;
+  top: 90%;
+}
+.arrow {
+  box-sizing: border-box;
+  height: 5vw;
+  width: 5vw;
+  border-style: solid;
+  border-color: white;
+  border-width: 0px 1px 1px 0px;
+  transform: rotate(45deg);
+  transition: border-width 150ms ease-in-out;
+}
+
+.arrow:hover {
+  border-bottom-width: 4px;
+  border-right-width: 4px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0e242d;
+  top: 84%;
+  height: 16vh;
+  position: absolute;
+  width: 100%;
+}
+
+#full {
+  padding-bottom: 16px;
+}
+//  top:85%;
+//  height: 15vh;
+//  background-color: #256347;
+//}
