@@ -56,7 +56,7 @@ export function Triangle(props: TriangleProps) {
         const elem = e.target as HTMLDivElement;
         const elemParent = elem.parentElement as HTMLDivElement;
         const classList = elemParent.classList;
-        const transition_duration = 1500
+        // const transition_duration = 1500
 
         if (!(classList.contains("active"))) {
             if (props.position === "top-left") {
@@ -64,10 +64,11 @@ export function Triangle(props: TriangleProps) {
             }
             new Promise<void>((resolve) => setTimeout(() => resolve(), 0)).then(res => {
                 classList.add("active")
-                setTimeout(() => {
-                        classList.add("active--2")
-                    }
-                    , transition_duration)
+                classList.add("active--2")
+                // setTimeout(() => {
+                //         classList.add("active--2")
+                //     }
+                //     , transition_duration)
             })
         }
     }

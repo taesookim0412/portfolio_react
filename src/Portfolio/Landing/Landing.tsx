@@ -13,24 +13,29 @@ export function Landing() {
             const elem = document.getElementsByClassName("triangle__layout")[0] as HTMLDivElement;
             const otherElem = document.getElementsByClassName("layout__nested")[0] as HTMLDivElement;
             if (!elem.classList.contains("active") && !otherElem.classList.contains("active")){
+                (document.getElementsByClassName("preview_img")[0] as HTMLDivElement).style.setProperty("visibility", "hidden")
                 dispatch(setProjects())
                 elem.classList.add("active");
                 elem.classList.add("active--2");
                 otherElem.classList.add("active");
                 otherElem.classList.add("active--2");
+
+                setTimeout(() => (document.getElementsByClassName("preview_img")[0] as HTMLDivElement).style.setProperty("visibility", "visible"), 1500);
             }
         }
-        // else{
-        //     const elem = document.getElementsByClassName("triangle__layout")[0] as HTMLDivElement;
-        //     const otherElem = document.getElementsByClassName("layout__nested")[0] as HTMLDivElement;
-        //     if (elem.classList.contains("active") && otherElem.classList.contains("active")){
-        //         dispatch(setHome())
-        //         elem.classList.remove("active");
-        //         elem.classList.remove("active--2");
-        //         otherElem.classList.remove("active");
-        //         otherElem.classList.remove("active--2");
-        //     }
-        // }
+        else{
+            const elem = document.getElementsByClassName("triangle__layout")[0] as HTMLDivElement;
+            const otherElem = document.getElementsByClassName("layout__nested")[0] as HTMLDivElement;
+            if (elem.classList.contains("active") && otherElem.classList.contains("active")){
+                dispatch(setHome())
+                elem.classList.remove("active");
+                elem.classList.remove("active--2");
+                otherElem.classList.remove("active");
+                otherElem.classList.remove("active--2");
+                (document.getElementsByClassName("preview_img")[0] as HTMLDivElement).style.setProperty("visibility", "hidden")
+
+            }
+        }
     })
     return (
         <>
