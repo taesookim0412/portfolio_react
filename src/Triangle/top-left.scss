@@ -1,5 +1,7 @@
 
 .top-left{
+  background-color: #0083ff;
+
   --slide-duration: 0.5s;
   //overrides triangle__outer height
   height:100vh !important;
@@ -10,8 +12,8 @@
     top: 0;
     //fixed inner
     left: -68px;
-    height: 900px;
-    width: 600px;
+    //height: 900px;
+    //width: 600px;
     transform: rotate(-66deg);
     transform-origin: top left;
     background-color: #141414a6;

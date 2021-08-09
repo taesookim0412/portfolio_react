@@ -3,44 +3,11 @@ import {useAppDispatch, useAppSelector} from "../../app/hooks";
 import {selectTriangleState, setHome, setProjects} from "../../features/ActiveTriangle/ActiveTriangleSlice";
 
 export function Landing() {
-    const triangleState = useAppSelector(selectTriangleState)
-    const dispatch = useAppDispatch()
     //home projects about
-    //TODO: Modularize this or make this a state. !TEMPORARY
-    document.addEventListener("scroll", (e) => {
-        const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-        if (window.pageYOffset > vh * 0.3){
-            const elem = document.getElementsByClassName("triangle__layout")[0] as HTMLDivElement;
-            const otherElem = document.getElementsByClassName("layout__nested")[0] as HTMLDivElement;
-            if (!elem.classList.contains("active") && !otherElem.classList.contains("active")){
-                (document.getElementsByClassName("preview_img")[0] as HTMLDivElement).style.setProperty("visibility", "hidden")
-                dispatch(setProjects())
-                elem.classList.add("active");
-                elem.classList.add("active--2");
-                otherElem.classList.add("active");
-                otherElem.classList.add("active--2");
-
-                setTimeout(() => (document.getElementsByClassName("preview_img")[0] as HTMLDivElement).style.setProperty("visibility", "visible"), 1500);
-            }
-        }
-        else{
-            const elem = document.getElementsByClassName("triangle__layout")[0] as HTMLDivElement;
-            const otherElem = document.getElementsByClassName("layout__nested")[0] as HTMLDivElement;
-            if (elem.classList.contains("active") && otherElem.classList.contains("active")){
-                dispatch(setHome())
-                elem.classList.remove("active");
-                elem.classList.remove("active--2");
-                otherElem.classList.remove("active");
-                otherElem.classList.remove("active--2");
-                (document.getElementsByClassName("preview_img")[0] as HTMLDivElement).style.setProperty("visibility", "hidden")
-
-            }
-        }
-    })
     return (
         <>
-            <div style={{top: "0", position: "absolute", zIndex: triangleState==="projects" ? 1:1}}>
-                <Triangle position={"top-left"} innerText={"projects"}/>
+            <div style={{top: "0", position: "absolute", zIndex: 1}}>
+                <Triangle position={"top-left"}/>
             </div>
             {/*<div style={{position: "absolute", top: "0%", transform: "scaleY(-1)", zIndex: triangleState==="about" ? 1:0}}>*/}
             {/*    <Triangle position={"bottom-left"} innerTextStyle={{transform: "scaleY(-1)"}} innerText={"about me"}/>*/}
